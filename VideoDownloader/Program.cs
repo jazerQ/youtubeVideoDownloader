@@ -9,6 +9,7 @@ builder.Configuration
     .AddEnvironmentVariables();
 
 builder.Services.AddHostedService<Worker>();
+builder.Services.AddTransient<BotHandler>();
 
 var host = builder.Build();
 host.Run();
